@@ -371,6 +371,12 @@ def branded_page(name):
     return HTMLResponse(page, headers={"Cache-Control": "no-cache"})
 
 
+@app.get("/favicon.ico")
+def favicon():
+    # Browsers ask for this by name on anything that isn't one of the two pages.
+    return FileResponse(STATIC / "favicon.ico", media_type="image/x-icon", headers={"Cache-Control": "no-cache"})
+
+
 @app.get("/")
 def index():
     return branded_page("index.html")

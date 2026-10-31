@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 100 824 824">
+  <style>path { fill: #16181c; } @media (prefers-color-scheme: dark) { path { fill: #f2f3f1; } }</style>
+  <!-- The app icon in one color: its tile, with the caption lines cut out. The lines are drawn top to bottom. -->
+  <path fill-rule="evenodd" d="M285 100H739A185 185 0 0 1 924 285V739A185 185 0 0 1 739 924H285A185 185 0 0 1 100 739V285A185 185 0 0 1 285 100ZM242 330A42 42 0 0 0 242 414H782A42 42 0 0 0 782 330ZM242 470A42 42 0 0 0 242 554H782A42 42 0 0 0 782 470ZM242 610A42 42 0 0 0 242 694H548A42 42 0 0 0 548 610Z"/>
+</svg>
