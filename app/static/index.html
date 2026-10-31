@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>__HEADING__</title>
+<link rel="stylesheet" href="/static/style.css?v=__STATIC_VERSION__">
+<link id="theme-css" rel="stylesheet" href="__THEME_CSS__">
+</head>
+<body>
+<header class="bar">
+  <div class="brand">
+    <img id="brand-logo" class="brand-logo" alt="" __LOGO__>
+    <h1 id="brand-heading">__HEADING__</h1>
+  </div>
+  <label class="field">
+    <span class="label">Language</span>
+    <select id="output-lang"></select>
+  </label>
+  <div class="field">
+    <span class="label">Listen</span>
+    <button id="play" class="play" type="button" aria-pressed="false">
+      <span class="play-icon" aria-hidden="true"></span><span id="play-text">Play</span>
+    </button>
+  </div>
+  <div class="field">
+    <span class="label" id="size-label">Text size</span>
+    <div class="segmented" role="group" aria-labelledby="size-label">
+      <button id="smaller" type="button" aria-label="Smaller text">A−</button>
+      <button id="larger" type="button" aria-label="Larger text">A+</button>
+    </div>
+  </div>
+</header>
+
+<section id="notice" class="notice" role="status" hidden></section>
+
+<main id="captions" aria-live="polite" aria-label="Live captions" tabindex="0">
+  <div id="empty" class="empty"></div>
+  <div id="lines"></div>
+  <p id="partial" class="partial" hidden></p>
+  <p id="listening" class="listening" role="img" aria-label="Someone is speaking" hidden><span></span><span></span><span></span></p>
+</main>
+<button id="jump" class="jump" type="button" hidden>↓ Back to live</button>
+
+<footer class="status">
+  <span id="live-dot" class="dot"></span><span id="status-text">Connecting…</span>
+</footer>
+<script src="/static/captions.js?v=__STATIC_VERSION__"></script>
+<script src="/static/keep-awake.js?v=__STATIC_VERSION__"></script>
+<script src="/static/public.js?v=__STATIC_VERSION__"></script>
+</body>
+</html>

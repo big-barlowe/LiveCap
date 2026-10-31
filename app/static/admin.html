@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LiveCap Admin</title>
+<link rel="stylesheet" href="/static/style.css?v=__STATIC_VERSION__">
+<link id="theme-css" rel="stylesheet" href="__THEME_CSS__">
+</head>
+<body>
+<header class="bar">
+  <div class="brand">
+    <img id="brand-logo" class="brand-logo" alt="" __LOGO__>
+    <h1>LiveCap Admin</h1>
+  </div>
+  <div class="field">
+    <span class="label" id="source-label">Audio source</span>
+    <div class="segmented" role="group" aria-labelledby="source-label">
+      <button data-source="" type="button">Off</button>
+      <button data-source="mic" type="button">Microphone</button>
+      <button data-source="obs" type="button">OBS</button>
+    </div>
+  </div>
+  <label class="field" id="mic-field" hidden>
+    <span class="label">Microphone</span>
+    <select id="mic-device"></select>
+  </label>
+  <label class="field">
+    <span class="label">Spoken language</span>
+    <select id="input-lang"></select>
+  </label>
+  <label class="field">
+    <span class="label">Captions in</span>
+    <select id="output-lang"></select>
+  </label>
+  <div class="field">
+    <span class="label">Read aloud</span>
+    <button id="play" class="play" type="button" aria-pressed="false">
+      <span class="play-icon" aria-hidden="true"></span><span id="play-text">Play</span>
+    </button>
+  </div>
+  <div class="field">
+    <span class="label" id="size-label">Text size</span>
+    <div class="segmented" role="group" aria-labelledby="size-label">
+      <button id="smaller" type="button" aria-label="Smaller text">A−</button>
+      <button id="larger" type="button" aria-label="Larger text">A+</button>
+    </div>
+  </div>
+  <div class="field">
+    <span class="label">Branding</span>
+    <button id="edit-theme" class="plain" type="button">Edit theme</button>
+  </div>
+</header>
+
+<section id="notice" class="notice" role="status" hidden></section>
+
+<main id="captions" aria-live="polite" aria-label="Live captions" tabindex="0">
+  <div id="empty" class="empty"></div>
+  <div id="lines"></div>
+  <p id="partial" class="partial" hidden></p>
+  <p id="listening" class="listening" role="img" aria-label="Someone is speaking" hidden><span></span><span></span><span></span></p>
+</main>
+<button id="jump" class="jump" type="button" hidden>↓ Back to live</button>
+
+<footer class="status">
+  <span id="live-dot" class="dot"></span><span id="status-text">Connecting…</span>
+  <span id="stats" class="stats"></span>
+  <a href="/" target="_blank" rel="noopener">Public page</a>
+</footer>
+
+<dialog id="theme-panel" class="theme-panel" aria-labelledby="theme-title">
+  <form id="theme-form" method="dialog">
+    <h2 id="theme-title">Theme</h2>
+    <p class="hint">Colors preview on this page as you choose them. Viewers see them when you save.</p>
+
+    <label class="field">
+      <span class="label">Heading on the public page</span>
+      <input id="theme-heading" type="text" maxlength="80" autocomplete="off">
+    </label>
+
+    <div class="field">
+      <span class="label" id="logo-label">Logo</span>
+      <div class="logo-row">
+        <span id="logo-status" class="logo-status"></span>
+        <label class="plain file-button">Choose image<input id="logo-file" type="file" accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml" aria-labelledby="logo-label"></label>
+        <button id="logo-remove" class="plain" type="button">Remove</button>
+      </div>
+      <span class="hint">PNG, JPEG, WebP, GIF or SVG, up to 5 MB. A transparent background looks best.</span>
+    </div>
+
+    <label class="field">
+      <span class="label">Appearance</span>
+      <select id="theme-appearance">
+        <option value="auto">Match each viewer's device</option>
+        <option value="light">Always light</option>
+        <option value="dark">Always dark</option>
+      </select>
+    </label>
+
+    <div class="field color-field" data-color="accent">
+      <span class="label">Main color: buttons and the live light</span>
+      <div class="color-row"></div>
+    </div>
+    <div class="field color-field" data-color="header">
+      <span class="label">Header and footer</span>
+      <div class="color-row"></div>
+    </div>
+    <div class="field color-field" data-color="background">
+      <span class="label">Caption background</span>
+      <div class="color-row"></div>
+    </div>
+    <p class="hint">Text colors are chosen for you, so captions stay easy to read on any color you pick.</p>
+
+    <p id="theme-error" class="theme-error" role="alert" hidden></p>
+    <div class="theme-actions">
+      <button id="theme-reset" class="plain" type="button">Reset to defaults</button>
+      <span class="spacer"></span>
+      <button id="theme-cancel" class="plain" type="button">Cancel</button>
+      <button id="theme-save" class="play" type="submit">Save</button>
+    </div>
+  </form>
+</dialog>
+<script src="/static/captions.js?v=__STATIC_VERSION__"></script>
+<script src="/static/keep-awake.js?v=__STATIC_VERSION__"></script>
+<script src="/static/admin.js?v=__STATIC_VERSION__"></script>
+</body>
+</html>

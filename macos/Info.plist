@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>LiveCap</string>
+	<key>CFBundleExecutable</key>
+	<string>LiveCap</string>
+	<key>CFBundleIconFile</key>
+	<string>LiveCap</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.livecap.app</string>
+	<key>CFBundleName</key>
+	<string>LiveCap</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSArchitecturePriority</key>
+	<array>
+		<string>arm64</string>
+	</array>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>LSMultipleInstancesProhibited</key>
+	<true/>
+	<key>LSRequiresNativeExecution</key>
+	<true/>
+	<key>LSUIElement</key>
+	<true/>
+	<key>LiveCapUpdateKey</key>
+	<string>zTtRbHk1aURsfHFrMsAwKw/UNJhdy4K1hi27aSPZLu0=</string>
+	<key>LiveCapUpdateRepo</key>
+	<string>big-barlowe/LiveCap</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>LiveCap</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>LiveCap serves captions to viewers on your network and receives audio from OBS.</string>
+</dict>
+</plist>

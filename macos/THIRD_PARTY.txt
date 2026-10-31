@@ -1,0 +1,23 @@
+LiveCap includes or downloads the following:
+
+Parakeet TDT 0.6B v3, NVIDIA, licensed under CC BY 4.0. Converted to MLX by mlx-community.
+https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3
+
+Supertonic 3, Supertone, licensed under the BigScience Open RAIL-M License, which restricts certain uses.
+https://huggingface.co/Supertone/supertonic-3
+
+Silero VAD, licensed under MIT, through pysilero-vad.
+
+Argos Translate models, downloaded per language, each under its own licence.
+https://github.com/argosopentech/argos-translate
+
+NoSleep.js video clip, Copyright (c) Rich Tibbett, licensed under MIT.
+https://github.com/richtr/NoSleep.js
+
+FFmpeg, licensed under LGPL 2.1 or later, built with these options:
+macos/build.sh in the LiveCap source. Source: https://ffmpeg.org
+
+libsrt, Haivision, licensed under MPL 2.0. Source: https://github.com/Haivision/srt
+
+Python, licensed under the PSF License, through python-build-standalone. Python packages are under the licences
+included in their folders at Contents/Resources/python/lib/python3.13/site-packages.
